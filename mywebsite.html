@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TE NANI FF | Official Website</title>
+
+  <style>
+    /* =========================
+       RESET
+    ========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       BODY
+    ========================== */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    header {
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       YOUTUBE SUBSCRIBE BUTTON
+    ========================== */
+    .subscribe-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 25px;
+
+      background: #ff0000;
+      color: #ffffff;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      border-radius: 30px;
+
+      transition: 0.3s;
+    }
+
+    .subscribe-btn:hover {
+      background: #cc0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+
+    /* =========================
+       SECTION
+    ========================== */
+    section {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    /* =========================
+       CARD
+    ========================== */
+    .card {
+      background: #1e293b;
+
+      border-radius: 16px;
+
+      padding: 30px;
+
+      margin-bottom: 25px;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    /* =========================
+       HEADINGS
+    ========================== */
+    h2 {
+      margin-bottom: 20px;
+      color: #ffb703;
+      font-size: 1.8rem;
+    }
+
+    /* =========================
+       STATS
+    ========================== */
+    .stats {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+      gap: 20px;
+    }
+
+    .stat-box {
+      background: #020617;
+
+      border-radius: 12px;
+
+      padding: 25px;
+
+      text-align: center;
+
+      border: 1px solid #1e40af;
+
+      transition: 0.3s;
+    }
+
+    .stat-box:hover {
+      transform: scale(1.05);
+      border-color: #38bdf8;
+    }
+
+    .stat-box h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+
+    .stat-box p {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* =========================
+       FREE FIRE DETAILS
+    ========================== */
+    .details {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 15px;
+    }
+
+    .detail-box {
+      background: #020617;
+
+      padding: 20px;
+
+      border-radius: 12px;
+
+      border-left: 4px solid #ff6a00;
+    }
+
+    .detail-box span {
+      display: block;
+
+      color: #94a3b8;
+
+      font-size: 0.85rem;
+
+      margin-bottom: 5px;
+    }
+
+    .detail-box strong {
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================== */
+    .social {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+    }
+
+    .social a {
+      display: inline-block;
+
+      padding: 12px 22px;
+
+      text-decoration: none;
+
+      color: #ffffff;
+
+      font-weight: bold;
+
+      border-radius: 10px;
+
+      transition: 0.3s;
+    }
+
+    /* YouTube */
+    .youtube {
+      background: #ff0000;
+    }
+
+    .youtube:hover {
+      background: #cc0000;
+
+      transform: scale(1.05);
+
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+
+    /* Instagram */
+    .instagram {
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+    }
+
+    .instagram:hover {
+      transform: scale(1.05);
+
+      box-shadow: 0 0 20px rgba(214, 41, 118, 0.5);
+    }
+
+    /* Discord */
+    .discord {
+      background: #5865f2;
+    }
+
+    .discord:hover {
+      background: #4752c4;
+
+      transform: scale(1.05);
+
+      box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    footer {
+      text-align: center;
+
+      padding: 25px;
+
+      background: #020617;
+
+      color: #94a3b8;
+
+      font-size: 0.9rem;
+
+      border-top: 1px solid #1e293b;
+    }
+
+    /* =========================
+       MOBILE RESPONSIVE
+    ========================== */
+    @media (max-width: 600px) {
+
+      header {
+        padding: 45px 15px;
+      }
+
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section {
+        width: 92%;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .social {
+        flex-direction: column;
+      }
+
+      .social a {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <h1>TE NANI FF</h1>
+
+    <p>
+      🎮 Free Fire Content Creator |
+      🔴 Live Streamer |
+  
+    </p>
+
+    <!-- YouTube Subscribe -->
+
+    <a
+      class="subscribe-btn"
+      href="https://www.youtube.com/@nffnani"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔴 SUBSCRIBE ON YOUTUBE
+    </a>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <section>
+
+    <!-- ABOUT ME -->
+
+    <div class="card">
+
+      <h2>🔥 About Me</h2>
+
+      <p>
+        Hi! I am a Free Fire YouTuber creating gameplay videos,
+        live streams, custom room matches, tournaments, and fun
+        Free Fire content.
+      </p>
+
+      <br>
+
+      <p>
+        Subscribe and support for daily Free Fire action! 🔥🎮
+      </p>
+
+    </div>
+
+
+    <!-- CHANNEL STATS -->
+
+    <div class="card">
+
+      <h2>📊 Channel Stats</h2>
+
+      <div class="stats">
+
+        <div class="stat-box">
+
+          <h3>5K+</h3>
+
+          <p>
+            YouTube Subscribers
+          </p>
+
+        </div>
+
+
+        <div class="stat-box">
+
+          <h3>100K+</h3>
+
+          <p>
+            Total Views
+          </p>
+
+        </div>
+
+
+        <div class="stat-box">
+
+          <h3>6 Years</h3>
+
+          <p>
+            Gaming Experience
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FREE FIRE DETAILS -->
+
+    <div class="card">
+
+      <h2>🎮 Free Fire Details</h2>
+
+      <div class="details">
+
+        <div class="detail-box">
+
+          <span>
+            In-Game Name
+          </span>
+
+          <strong>
+            NANI
+          </strong>
+
+        </div>
+
+
+        <div class="detail-box">
+
+          <span>
+            UID
+          </span>
+
+          <strong>
+            1038756146
+          </strong>
+
+        </div>
+
+
+        <div class="detail-box">
+
+          <span>
+            Guild
+          </span>
+
+          <strong>
+            NFF CLAN
+          </strong>
+
+        </div>
+
+
+        <div class="detail-box">
+
+          <span>
+            Region
+          </span>
+
+          <strong>
+            India 🇮🇳
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SOCIAL MEDIA LINKS -->
+
+    <div class="card">
+
+      <h2>🌐 Social Media</h2>
+
+      <div class="social">
+
+
+        <!-- =========================
+             YOUTUBE LINK
+        ========================== -->
+
+        <a
+          class="youtube"
+          href="https://www.youtube.com/@nffnani"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ▶ YouTube
+        </a>
+
+
+        <!-- =========================
+             INSTAGRAM LINK
+        ========================== -->
+
+        <a
+          class="instagram"
+          href="https://www.instagram.com/blackpink_gaming_18_/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📸 Instagram
+        </a>
+
+
+        <!-- =========================
+             DISCORD LINK
+        ========================== -->
+
+        <a
+          class="discord"
+          href="https://discord.gg/tMrEaBguww"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 Discord
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026 TE NANI FF | All Rights Reserved 🔥
+
+  </footer>
+
+</body>
+</html>
